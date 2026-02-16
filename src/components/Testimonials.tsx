@@ -27,7 +27,7 @@ const testimonials = [
     role: 'CA Professional, Hyderabad',
     avatar: 'SR',
     rating: 4,
-    text: 'Perfect for working professionals. Self-paced videos plus weekend live sessions — I never felt rushed. The community support is outstanding.',
+    text: 'Perfect for working professionals. Self-paced videos plus weekend live sessions - I never felt rushed. The community support is outstanding.',
   },
   {
     name: 'Vikram Singh',

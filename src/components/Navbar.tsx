@@ -5,7 +5,11 @@ import {
   TrendingUp,
 } from 'lucide-react';
 
-export default function Navbar() {
+interface NavbarProps {
+  onEnrollClick?: () => void;
+}
+
+export default function Navbar({ onEnrollClick }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -63,12 +67,12 @@ export default function Navbar() {
 
           {/* CTA */}
           <div className="hidden lg:flex items-center gap-3">
-            <a
-              href="#contact"
-              className="px-5 py-2.5 text-sm font-semibold rounded-xl bg-gradient-to-r from-forest-500 to-forest-600 text-white hover:from-forest-400 hover:to-forest-500 transition-all duration-300 shadow-lg shadow-forest-500/25 hover:shadow-forest-500/40"
+            <button
+              onClick={onEnrollClick}
+              className="px-5 py-2.5 text-sm font-semibold rounded-xl bg-gradient-to-r from-forest-500 to-forest-600 text-white hover:from-forest-400 hover:to-forest-500 transition-all duration-300 shadow-lg shadow-forest-500/25 hover:shadow-forest-500/40 cursor-pointer border-0"
             >
               Enroll Now
-            </a>
+            </button>
           </div>
 
           {/* Mobile Toggle */}
@@ -93,13 +97,15 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <a
-              href="#contact"
-              onClick={() => setIsOpen(false)}
-              className="block mx-4 mt-3 px-5 py-3 text-sm font-semibold rounded-xl bg-gradient-to-r from-forest-500 to-forest-600 text-white text-center"
+            <button
+              onClick={() => {
+                onEnrollClick?.();
+                setIsOpen(false);
+              }}
+              className="block mx-4 mt-3 px-5 py-3 text-sm font-semibold rounded-xl bg-gradient-to-r from-forest-500 to-forest-600 text-white text-center w-full border-0 cursor-pointer"
             >
               Enroll Now
-            </a>
+            </button>
           </div>
         )}
       </div>
