@@ -6,13 +6,31 @@ import {
   BarChart3,
   Shield,
   Users,
+  TrendingUp,
 } from 'lucide-react';
-
+import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 interface HeroProps {
   onEnrollClick?: () => void;
 }
 
 export default function Hero({ onEnrollClick }: HeroProps) {
+=======
+export default function Hero() {
+  const [currentText, setCurrentText] = useState(0);
+  const texts = [
+    'Trade with Confidence.',
+    'Master Algo Trading.',
+    'Build Your Portfolio.',
+    'Achieve Financial Freedom.',
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentText((prev) => (prev + 1) % texts.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background */}
@@ -43,7 +61,17 @@ export default function Hero({ onEnrollClick }: HeroProps) {
             <div className="space-y-4">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight">
                 Build Consistent Skills.{' '}
-                <span className="gradient-text">Trade with Confidence.</span>
+                <span className="gradient-text block mt-2">
+                  <motion.span
+                    key={currentText}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    {texts[currentText]}
+                  </motion.span>
+                </span>
               </h1>
               <p className="text-lg sm:text-xl text-white/60 max-w-lg leading-relaxed">
                 Professional training in Algo Trading, Index Options, Forex & Crypto with structured mentorship and real-market strategies.
@@ -90,34 +118,92 @@ export default function Hero({ onEnrollClick }: HeroProps) {
             </div>
           </div>
 
-          {/* Right visual */}
+          {/* Right visual - 3D Portfolio Chart */}
           <div className="hidden lg:flex justify-center items-center relative">
-            {/* Main card */}
-            <div className="relative w-full max-w-md">
+            {/* Main card with 3D effect */}
+            <motion.div 
+              className="relative w-full max-w-md"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
+            >
               {/* Glowing ring */}
               <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-forest-500/20 via-transparent to-gold-500/20 blur-xl" />
               
-              <div className="relative glass-strong rounded-3xl p-8 space-y-6">
-                {/* Mock chart */}
+              <div 
+                className="relative glass-strong rounded-3xl p-8 space-y-6 hover:scale-105 transition-transform duration-500"
+                style={{ 
+                  transformStyle: 'preserve-3d',
+                  transform: 'perspective(1000px) rotateY(-5deg)',
+                }}
+              >
+                {/* Portfolio header */}
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-sm text-white/40 font-medium">Portfolio Growth</p>
-                    <p className="text-3xl font-bold gradient-text-gold">+42.8%</p>
+                    <motion.p 
+                      className="text-3xl font-bold gradient-text-gold"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 0.3 }}
+                    >
+                      +42.8%
+                    </motion.p>
                   </div>
                   <div className="w-12 h-12 rounded-2xl bg-forest-500/10 flex items-center justify-center">
-                    <BarChart3 className="w-6 h-6 text-forest-400" />
+                    <TrendingUp className="w-6 h-6 text-forest-400" />
                   </div>
                 </div>
 
-                {/* Mini chart bars */}
-                <div className="flex items-end gap-2 h-24">
-                  {[40, 55, 35, 70, 50, 85, 60, 90, 75, 95, 80, 100].map((h, i) => (
-                    <div
-                      key={i}
-                      className="flex-1 rounded-t-sm bg-gradient-to-t from-forest-600/60 to-forest-400/80 transition-all duration-700"
-                      style={{ height: `${h}%`, animationDelay: `${i * 0.1}s` }}
-                    />
-                  ))}
+                {/* 3D Chart visualization */}
+                <div className="relative h-32" style={{ perspective: '800px' }}>
+                  <div className="flex items-end justify-center gap-3 h-full">
+                    {[
+                      { height: 40, delay: 0 },
+                      { height: 55, delay: 0.1 },
+                      { height: 35, delay: 0.2 },
+                      { height: 70, delay: 0.3 },
+                      { height: 50, delay: 0.4 },
+                      { height: 85, delay: 0.5 },
+                      { height: 60, delay: 0.6 },
+                      { height: 90, delay: 0.7 },
+                      { height: 75, delay: 0.8 },
+                      { height: 95, delay: 0.9 },
+                    ].map((bar, i) => (
+                      <motion.div
+                        key={i}
+                        className="relative w-8 rounded-t-lg bg-gradient-to-t from-forest-600/80 via-forest-500 to-forest-400 shadow-lg"
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: `${bar.height}%`, opacity: 1 }}
+                        transition={{ 
+                          delay: bar.delay, 
+                          duration: 0.6,
+                          ease: 'easeOut'
+                        }}
+                        style={{
+                          transformStyle: 'preserve-3d',
+                          transform: `translateZ(${i * 5}px) rotateY(${i * 2}deg)`,
+                        }}
+                        whileHover={{ 
+                          scale: 1.1,
+                          backgroundColor: 'rgba(52, 211, 153, 0.9)',
+                        }}
+                      >
+                        {/* 3D depth effect */}
+                        <div 
+                          className="absolute top-0 -right-1 w-1 h-full bg-forest-700/50"
+                          style={{ transform: 'rotateY(90deg) translateX(0.5px)' }}
+                        />
+                      </motion.div>
+                    ))}
+                  </div>
+                  
+                  {/* Grid lines */}
+                  <div className="absolute inset-0 flex flex-col justify-between pointer-events-none">
+                    {[0, 1, 2, 3].map((i) => (
+                      <div key={i} className="w-full h-px bg-white/5" />
+                    ))}
+                  </div>
                 </div>
 
                 {/* Stats row */}
@@ -126,25 +212,39 @@ export default function Hero({ onEnrollClick }: HeroProps) {
                     { label: 'Win Rate', value: '72%' },
                     { label: 'Strategies', value: '15+' },
                     { label: 'Students', value: '2K+' },
-                  ].map((stat) => (
-                    <div key={stat.label} className="text-center">
+                  ].map((stat, i) => (
+                    <motion.div 
+                      key={stat.label} 
+                      className="text-center"
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 1 + i * 0.1 }}
+                    >
                       <p className="text-lg font-bold text-white">{stat.value}</p>
                       <p className="text-xs text-white/40">{stat.label}</p>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
               </div>
 
               {/* Floating badges */}
-              <div className="absolute -top-4 -right-4 glass rounded-2xl px-4 py-3 flex items-center gap-2 animate-float shadow-xl shadow-black/20">
+              <motion.div 
+                className="absolute -top-4 -right-4 glass rounded-2xl px-4 py-3 flex items-center gap-2 shadow-xl shadow-black/20"
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+              >
                 <Shield className="w-5 h-5 text-forest-400" />
                 <span className="text-xs font-semibold text-white">Risk Managed</span>
-              </div>
-              <div className="absolute -bottom-4 -left-4 glass rounded-2xl px-4 py-3 flex items-center gap-2 animate-float shadow-xl shadow-black/20" style={{ animationDelay: '-2s' }}>
+              </motion.div>
+              <motion.div 
+                className="absolute -bottom-4 -left-4 glass rounded-2xl px-4 py-3 flex items-center gap-2 shadow-xl shadow-black/20"
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
+              >
                 <CheckCircle2 className="w-5 h-5 text-gold-400" />
                 <span className="text-xs font-semibold text-white">Verified Results</span>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
       </div>
