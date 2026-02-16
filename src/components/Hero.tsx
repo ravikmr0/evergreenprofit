@@ -8,7 +8,11 @@ import {
   Users,
 } from 'lucide-react';
 
-export default function Hero() {
+interface HeroProps {
+  onEnrollClick?: () => void;
+}
+
+export default function Hero({ onEnrollClick }: HeroProps) {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background */}
@@ -48,13 +52,13 @@ export default function Hero() {
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4">
-              <a
-                href="#contact"
-                className="group inline-flex items-center gap-2 px-7 py-4 rounded-xl bg-gradient-to-r from-forest-500 to-forest-600 text-white font-semibold text-base hover:from-forest-400 hover:to-forest-500 transition-all duration-300 shadow-xl shadow-forest-500/25 hover:shadow-forest-500/40 hover:-translate-y-0.5"
+              <button
+                onClick={onEnrollClick}
+                className="group inline-flex items-center gap-2 px-7 py-4 rounded-xl bg-gradient-to-r from-forest-500 to-forest-600 text-white font-semibold text-base hover:from-forest-400 hover:to-forest-500 transition-all duration-300 shadow-xl shadow-forest-500/25 hover:shadow-forest-500/40 hover:-translate-y-0.5 cursor-pointer border-0"
               >
                 Enroll Now
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
+              </button>
               <a
                 href="#programs"
                 className="group inline-flex items-center gap-2 px-7 py-4 rounded-xl glass text-white font-semibold text-base hover:bg-white/10 transition-all duration-300 hover:-translate-y-0.5"
