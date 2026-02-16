@@ -15,8 +15,9 @@ interface HeroProps {
 }
 
 export default function Hero({ onEnrollClick }: HeroProps) {
-=======
-export default function Hero() {
+  const handleEnrollClick = () => {
+    onEnrollClick?.();
+  };
   const [currentText, setCurrentText] = useState(0);
   const texts = [
     'Trade with Confidence.',
@@ -81,7 +82,7 @@ export default function Hero() {
             {/* CTAs */}
             <div className="flex flex-wrap gap-4">
               <button
-                onClick={onEnrollClick}
+                onClick={handleEnrollClick}
                 className="group inline-flex items-center gap-2 px-7 py-4 rounded-xl bg-gradient-to-r from-forest-500 to-forest-600 text-white font-semibold text-base hover:from-forest-400 hover:to-forest-500 transition-all duration-300 shadow-xl shadow-forest-500/25 hover:shadow-forest-500/40 hover:-translate-y-0.5 cursor-pointer border-0"
               >
                 Enroll Now
