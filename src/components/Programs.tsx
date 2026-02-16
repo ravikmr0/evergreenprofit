@@ -25,6 +25,7 @@ const programs = [
     iconBg: 'bg-forest-500/10',
     iconColor: 'text-forest-400',
     cta: 'Join Telegram',
+    link: 'https://t.me/Algo_Profit_Trading',
     thumbnail: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
   },
   {
@@ -40,6 +41,7 @@ const programs = [
     iconBg: 'bg-blue-500/10',
     iconColor: 'text-blue-400',
     cta: 'Join Telegram',
+    link: 'https://t.me/evergreen_forex_crypto_trading',
     thumbnail: 'https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=800&q=80',
   },
   {
@@ -55,6 +57,7 @@ const programs = [
     iconBg: 'bg-gold-500/10',
     iconColor: 'text-gold-400',
     cta: 'Enroll Now',
+    link: 'https://superprofile.bio/evergreenprofit1/NnFYQIHyIx',
     thumbnail: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80',
   },
 ];
@@ -174,7 +177,9 @@ export default function Programs() {
                     Get Quote
                   </button>
                   <a
-                    href="#contact"
+                    href={program.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold ${program.iconColor} border ${program.borderColor} hover:bg-white/5 transition-all duration-300`}
                   >
                     {program.cta}
