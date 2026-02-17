@@ -22,27 +22,27 @@ const testimonials = [
     rating: 5,
     text: 'The Forex module opened up global markets for me. The live simulations were game-changing. Worth every rupee invested in this education.',
   },
-  {
-    name: 'Sneha Reddy',
-    role: 'CA Professional, Hyderabad',
-    avatar: 'SR',
-    rating: 4,
-    text: 'Perfect for working professionals. Self-paced videos plus weekend live sessions - I never felt rushed. The community support is outstanding.',
-  },
-  {
-    name: 'Vikram Singh',
-    role: 'Full-Time Trader, Jaipur',
-    avatar: 'VS',
-    rating: 5,
-    text: 'I transitioned from random trading to systematic strategies after this course. The mentorship and strategy frameworks are top-notch.',
-  },
-  {
-    name: 'Ananya Joshi',
-    role: 'Data Analyst, Pune',
-    avatar: 'AJ',
-    rating: 5,
-    text: 'The combination of technical analysis and psychology modules is what sets this apart. I finally understand why I was making emotional trading mistakes.',
-  },
+  // {
+  //   name: 'Sneha Reddy',
+  //   role: 'CA Professional, Hyderabad',
+  //   avatar: 'SR',
+  //   rating: 4,
+  //   text: 'Perfect for working professionals. Self-paced videos plus weekend live sessions - I never felt rushed. The community support is outstanding.',
+  // },
+  // {
+  //   name: 'Vikram Singh',
+  //   role: 'Full-Time Trader, Jaipur',
+  //   avatar: 'VS',
+  //   rating: 5,
+  //   text: 'I transitioned from random trading to systematic strategies after this course. The mentorship and strategy frameworks are top-notch.',
+  // },
+  // {
+  //   name: 'Ananya Joshi',
+  //   role: 'Data Analyst, Pune',
+  //   avatar: 'AJ',
+  //   rating: 5,
+  //   text: 'The combination of technical analysis and psychology modules is what sets this apart. I finally understand why I was making emotional trading mistakes.',
+  // },
 ];
 
 export default function Testimonials() {
