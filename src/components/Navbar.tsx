@@ -40,7 +40,7 @@ export default function Navbar({ onEnrollClick }: NavbarProps) {
           {/* Logo */}
           <a href="#" className="flex items-center gap-3 group">
             <img 
-              src="/evergreen.png" 
+              src="/evergreenn.png" 
               alt="Evergreen Profit Academy Logo" 
               className="w-10 h-10 sm:w-12 sm:h-12 object-contain group-hover:scale-105 transition-transform duration-300"
             />
