@@ -42,7 +42,7 @@ const programs = [
     iconColor: 'text-blue-400',
     cta: 'Join Telegram',
     link: 'https://t.me/evergreen_forex_crypto_trading',
-    thumbnail: 'https://chatgpt.com/s/m_69941bd787a08191a7958e9f14d7efdb',
+    thumbnail: 'forex.png',
   },
   {
     icon: GraduationCap,
