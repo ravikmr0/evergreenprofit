@@ -47,18 +47,18 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="relative py-24 lg:py-32 overflow-hidden">
+    <section id="testimonials" className="relative py-14 lg:py-16 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-navy-950" />
       <div className="absolute right-1/4 top-1/2 w-[500px] h-[500px] bg-gold-500/5 rounded-full blur-[150px]" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16 section-animate">
-          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase text-forest-400 bg-forest-500/10 border border-forest-500/20 mb-6">
+        <div className="text-center max-w-2xl mx-auto mb-10 section-animate">
+          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase text-forest-400 bg-forest-500/10 border border-forest-500/20 mb-4">
             Success Stories
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4">
             What Our{' '}
             <span className="gradient-text">Students Say</span>
           </h2>
@@ -72,19 +72,19 @@ export default function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.name}
-              className="section-animate group relative p-7 rounded-2xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-white/10 transition-all duration-500"
+              className="section-animate group relative p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-white/10 transition-all duration-500"
               style={{ transitionDelay: `${index * 80}ms` }}
             >
               {/* Quote icon */}
-              <Quote className="w-8 h-8 text-forest-500/20 mb-4" />
+              <Quote className="w-8 h-8 text-forest-500/20 mb-3" />
 
               {/* Text */}
-              <p className="text-sm text-white/60 leading-relaxed mb-6">
+              <p className="text-sm text-white/60 leading-relaxed mb-4">
                 "{testimonial.text}"
               </p>
 
               {/* Rating */}
-              <div className="flex gap-1 mb-4">
+              <div className="flex gap-1 mb-3">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <Star
                     key={i}

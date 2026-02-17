@@ -86,18 +86,18 @@ export default function Programs() {
   };
 
   return (
-    <section id="programs" className="relative py-24 lg:py-32 overflow-hidden">
+    <section id="programs" className="relative py-14 lg:py-16 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-navy-950" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-forest-500/5 rounded-full blur-[150px]" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16 section-animate">
-          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase text-forest-400 bg-forest-500/10 border border-forest-500/20 mb-6">
+        <div className="text-center max-w-2xl mx-auto mb-10 section-animate">
+          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase text-forest-400 bg-forest-500/10 border border-forest-500/20 mb-4">
             Programs Offered
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4">
             Choose Your{' '}
             <span className="gradient-text">Trading Path</span>
           </h2>
@@ -107,7 +107,7 @@ export default function Programs() {
         </div>
 
         {/* Telegram Button */}
-        <div className="text-center mb-12 section-animate">
+        <div className="text-center mb-8 section-animate">
           <a
             href="https://t.me/Algo_Profit_Trading"
             target="_blank"
@@ -128,7 +128,7 @@ export default function Programs() {
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               {/* Thumbnail */}
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-40 overflow-hidden">
                 <img 
                   src={program.thumbnail} 
                   alt={program.title}
@@ -144,7 +144,7 @@ export default function Programs() {
                 </div>
               </div>
 
-              <div className="p-8 space-y-6">
+              <div className="p-6 space-y-4">
                 {/* Content */}
                 <div>
                   <p className={`text-xs font-semibold tracking-wider uppercase ${program.iconColor} mb-2`}>

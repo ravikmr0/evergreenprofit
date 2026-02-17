@@ -37,20 +37,20 @@ const benefits = [
 
 export default function WhyChooseUs() {
   return (
-    <section id="why-us" className="relative py-24 lg:py-32 overflow-hidden">
+    <section id="why-us" className="relative py-14 lg:py-16 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-navy-950 via-[#071422] to-navy-950" />
       <div className="absolute right-0 top-1/3 w-[500px] h-[500px] bg-gold-500/5 rounded-full blur-[150px]" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 items-center">
           {/* Left */}
-          <div className="section-animate space-y-8">
+          <div className="section-animate space-y-6">
             <div>
-              <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase text-gold-400 bg-gold-500/10 border border-gold-500/20 mb-6">
+              <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase text-gold-400 bg-gold-500/10 border border-gold-500/20 mb-4">
                 Why Choose Us
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-6">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4">
                 Education That{' '}
                 <span className="gradient-text-gold">Delivers Results</span>
               </h2>
@@ -60,7 +60,7 @@ export default function WhyChooseUs() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid grid-cols-3 gap-4">
               {[
                 { value: '2000+', label: 'Students Trained' },
                 { value: '95%', label: 'Satisfaction Rate' },
@@ -75,7 +75,7 @@ export default function WhyChooseUs() {
           </div>
 
           {/* Right - Benefits */}
-          <div className="space-y-4">
+          <div className="space-y-3">
             {benefits.map((benefit, index) => (
               <div
                 key={benefit.title}
