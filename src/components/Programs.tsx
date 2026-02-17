@@ -181,7 +181,7 @@ export default function Programs() {
                     </a>
                   ) : (program.title === 'ALGO Trading Strategies' || program.title === 'Forex & Crypto Academy') ? (
                     <a
-                      href="https://superprofile.bio/evergreenprofit/zTXuXeaxfC"
+                      href="https://superprofile.bio/evergreenprofit1/NnFYQIHyIx"
                       target="_blank"
                       rel="noopener noreferrer"
                       className={`flex-1 px-4 py-2.5 rounded-xl text-sm font-semibold text-white ${program.iconBg} border ${program.borderColor} hover:bg-white/10 transition-all duration-300 text-center`}
