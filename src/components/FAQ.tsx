@@ -96,7 +96,9 @@ export default function FAQ() {
         <div className="mt-12 text-center section-animate">
           <p className="text-white/50 mb-4">Still have questions?</p>
           <a
-            href="#contact"
+            href={`https://wa.me/?text=${encodeURIComponent('I have questions about your trading programs')}`}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block px-8 py-3 rounded-xl bg-gradient-to-r from-gold-500 to-gold-600 text-navy-950 font-semibold hover:shadow-lg hover:shadow-gold-500/20 transition-all duration-300 hover:scale-105"
           >
             Get in Touch
