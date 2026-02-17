@@ -86,7 +86,7 @@ export default function Programs() {
   };
 
   return (
-    <section id="programs" className="relative py-14 lg:py-16 overflow-hidden">
+    <section id="programs" className="relative py-10 lg:py-12 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-navy-950" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-forest-500/5 rounded-full blur-[150px]" />
@@ -170,12 +170,32 @@ export default function Programs() {
 
                 {/* CTA Buttons */}
                 <div className="flex gap-3">
-                  <button
-                    onClick={() => handleGetQuote(program.title)}
-                    className={`flex-1 px-4 py-2.5 rounded-xl text-sm font-semibold text-white ${program.iconBg} border ${program.borderColor} hover:bg-white/10 transition-all duration-300`}
-                  >
-                    Get Quote
-                  </button>
+                  {program.title === 'Evergreen Profit Course' ? (
+                    <a
+                      href="https://superprofile.bio/evergreenprofit1/zTXuXeaxfC"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`flex-1 px-4 py-2.5 rounded-xl text-sm font-semibold text-white ${program.iconBg} border ${program.borderColor} hover:bg-white/10 transition-all duration-300 text-center`}
+                    >
+                      Paid Course
+                    </a>
+                  ) : (program.title === 'ALGO Trading Strategies' || program.title === 'Forex & Crypto Academy') ? (
+                    <a
+                      href="https://superprofile.bio/evergreenprofit/zTXuXeaxfC"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`flex-1 px-4 py-2.5 rounded-xl text-sm font-semibold text-white ${program.iconBg} border ${program.borderColor} hover:bg-white/10 transition-all duration-300 text-center`}
+                    >
+                      Paid Course
+                    </a>
+                  ) : (
+                    <button
+                      onClick={() => handleGetQuote(program.title)}
+                      className={`flex-1 px-4 py-2.5 rounded-xl text-sm font-semibold text-white ${program.iconBg} border ${program.borderColor} hover:bg-white/10 transition-all duration-300`}
+                    >
+                      Get Quote
+                    </button>
+                  )}
                   <a
                     href={program.link}
                     target="_blank"

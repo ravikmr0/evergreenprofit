@@ -6,7 +6,7 @@ interface CTAProps {
 
 export default function CTA({ onEnrollClick }: CTAProps) {
   return (
-    <section className="relative py-12 lg:py-14 overflow-hidden">
+    <section className="relative py-10 lg:py-12 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-navy-950 via-[#071422] to-navy-950" />
       

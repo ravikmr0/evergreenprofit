@@ -48,7 +48,7 @@ export default function Hero({ onEnrollClick }: HeroProps) {
         backgroundSize: '60px 60px',
       }} />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-14">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
           <div className="space-y-6">
@@ -96,7 +96,9 @@ export default function Hero({ onEnrollClick }: HeroProps) {
                 Download Brochure
               </a>
               <a
-                href="#contact"
+                href="https://wa.me/?text=Hi%2C%20I%20would%20like%20to%20talk%20to%20an%20advisor%20about%20your%20trading%20programs"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 px-7 py-4 rounded-xl border border-gold-500/30 text-gold-300 font-semibold text-base hover:bg-gold-500/10 hover:border-gold-500/50 transition-all duration-300 hover:-translate-y-0.5"
               >
                 <MessageCircle className="w-4 h-4" />

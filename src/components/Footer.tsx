@@ -29,12 +29,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand & Description */}
           <div className="md:col-span-2 flex flex-col items-center md:items-start gap-4">
-            <a href="#" className="flex items-center gap-2.5 group">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-forest-400 to-gold-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-forest-500/20">
-                <TrendingUp className="w-5 h-5 text-navy-950" strokeWidth={2.5} />
-              </div>
+            <a href="#" className="flex items-center gap-3 group">
+              <img 
+                src="/evergreen.png" 
+                alt="Evergreen Profit Academy Logo" 
+                className="w-12 h-12 object-contain group-hover:scale-110 transition-transform duration-300"
+              />
               <div className="flex flex-col">
-                <span className="text-lg font-bold tracking-tight leading-none text-white">
+                <span className="text-base sm:text-lg font-bold tracking-tight leading-none text-white">
                   Evergreen Profit
                 </span>
                 <span className="text-[9px] font-medium tracking-[0.2em] uppercase text-forest-400/70">
