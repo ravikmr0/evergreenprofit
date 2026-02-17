@@ -58,7 +58,7 @@ const programs = [
     iconColor: 'text-gold-400',
     cta: 'Enroll Now',
     link: 'https://superprofile.bio/evergreenprofit1/NnFYQIHyIx',
-    thumbnail: 'https://ideogram.ai/assets/image/balanced/response/ZjixWFo-RRuAXP940JDWIg@2k',
+    thumbnail: '/learn.png',
   },
 ];
 
