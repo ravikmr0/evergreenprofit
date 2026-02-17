@@ -26,7 +26,7 @@ const programs = [
     iconColor: 'text-forest-400',
     cta: 'Join Telegram',
     link: 'https://t.me/Algo_Profit_Trading',
-    thumbnail: 'https://ideogram.ai/assets/image/balanced/response/UILY2qJxTRqTbE38oxc_7g@2k',
+    thumbnail: 'https://chatgpt.com/s/m_69941ac9931c8191a4ceb9434b541480',
   },
   {
     icon: Globe2,
@@ -42,7 +42,7 @@ const programs = [
     iconColor: 'text-blue-400',
     cta: 'Join Telegram',
     link: 'https://t.me/evergreen_forex_crypto_trading',
-    thumbnail: 'https://ideogram.ai/assets/image/balanced/response/cTo55E-4SuinLa48t1Q5og@2k',
+    thumbnail: 'https://chatgpt.com/s/m_69941bd787a08191a7958e9f14d7efdb',
   },
   {
     icon: GraduationCap,
