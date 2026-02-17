@@ -6,6 +6,7 @@ import WhyChooseUs from './components/WhyChooseUs';
 import LearningExperience from './components/LearningExperience';
 import WhoIsThisFor from './components/WhoIsThisFor';
 import Testimonials from './components/Testimonials';
+import FAQ from './components/FAQ';
 import CTA from './components/CTA';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -26,6 +27,7 @@ export default function App() {
       <LearningExperience />
       <WhoIsThisFor />
       <Testimonials />
+      <FAQ />
       <CTA onEnrollClick={() => setEnrollModalOpen(true)} />
       <Contact />
       <Footer />

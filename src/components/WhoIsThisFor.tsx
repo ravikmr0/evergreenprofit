@@ -43,7 +43,7 @@ const personas = [
 
 export default function WhoIsThisFor() {
   return (
-    <section className="relative py-14 lg:py-16 overflow-hidden">
+    <section className="relative py-10 lg:py-12 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-navy-950 via-[#071422] to-navy-950" />
 

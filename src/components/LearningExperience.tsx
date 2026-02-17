@@ -42,7 +42,7 @@ const features = [
 
 export default function LearningExperience() {
   return (
-    <section id="experience" className="relative py-14 lg:py-16 overflow-hidden">
+    <section id="experience" className="relative py-10 lg:py-12 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-navy-950" />
       <div className="absolute left-1/4 top-1/2 w-[500px] h-[500px] bg-forest-500/5 rounded-full blur-[150px]" />
