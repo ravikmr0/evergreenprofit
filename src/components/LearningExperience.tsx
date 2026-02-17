@@ -42,18 +42,18 @@ const features = [
 
 export default function LearningExperience() {
   return (
-    <section id="experience" className="relative py-24 lg:py-32 overflow-hidden">
+    <section id="experience" className="relative py-14 lg:py-16 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-navy-950" />
       <div className="absolute left-1/4 top-1/2 w-[500px] h-[500px] bg-forest-500/5 rounded-full blur-[150px]" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16 section-animate">
-          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase text-forest-400 bg-forest-500/10 border border-forest-500/20 mb-6">
+        <div className="text-center max-w-2xl mx-auto mb-10 section-animate">
+          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase text-forest-400 bg-forest-500/10 border border-forest-500/20 mb-4">
             Learning Experience
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4">
             A Complete{' '}
             <span className="gradient-text">Learning Ecosystem</span>
           </h2>
@@ -67,10 +67,10 @@ export default function LearningExperience() {
           {features.map((feature, index) => (
             <div
               key={feature.title}
-              className="section-animate group relative p-7 rounded-2xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.05] hover:border-forest-500/20 transition-all duration-500 hover:-translate-y-1"
+              className="section-animate group relative p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.05] hover:border-forest-500/20 transition-all duration-500 hover:-translate-y-1"
               style={{ transitionDelay: `${index * 80}ms` }}
             >
-              <div className="w-12 h-12 rounded-2xl bg-forest-500/10 flex items-center justify-center mb-5 group-hover:bg-forest-500/20 transition-colors duration-300">
+              <div className="w-12 h-12 rounded-2xl bg-forest-500/10 flex items-center justify-center mb-4 group-hover:bg-forest-500/20 transition-colors duration-300">
                 <feature.icon className="w-6 h-6 text-forest-400" />
               </div>
               <h3 className="text-lg font-bold text-white mb-2">{feature.title}</h3>

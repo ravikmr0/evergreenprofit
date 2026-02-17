@@ -6,7 +6,7 @@ interface CTAProps {
 
 export default function CTA({ onEnrollClick }: CTAProps) {
   return (
-    <section className="relative py-16 lg:py-20 overflow-hidden">
+    <section className="relative py-12 lg:py-14 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-navy-950 via-[#071422] to-navy-950" />
       
@@ -15,15 +15,15 @@ export default function CTA({ onEnrollClick }: CTAProps) {
       <div className="absolute right-1/3 top-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gold-500/8 rounded-full blur-[120px]" />
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="section-animate text-center glass-strong rounded-3xl p-8 sm:p-12 lg:p-16 border border-white/10">
+        <div className="section-animate text-center glass-strong rounded-3xl p-8 sm:p-10 lg:p-12 border border-white/10">
           {/* Decorative line */}
-          <div className="w-16 h-1 bg-gradient-to-r from-forest-400 to-gold-400 rounded-full mx-auto mb-8" />
+          <div className="w-16 h-1 bg-gradient-to-r from-forest-400 to-gold-400 rounded-full mx-auto mb-6" />
           
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4">
             Start Your Trading Education{' '}
             <span className="gradient-text">the Right Way.</span>
           </h2>
-          <p className="text-lg text-white/50 max-w-xl mx-auto mb-10 leading-relaxed">
+          <p className="text-lg text-white/50 max-w-xl mx-auto mb-8 leading-relaxed">
             Join thousands of learners who chose structured education over guesswork. Your journey to smarter, disciplined trading starts here.
           </p>
 

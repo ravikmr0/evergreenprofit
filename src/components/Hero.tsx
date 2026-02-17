@@ -33,7 +33,7 @@ export default function Hero({ onEnrollClick }: HeroProps) {
     return () => clearInterval(interval);
   }, []);
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-hero-pattern" />
       
@@ -48,10 +48,10 @@ export default function Hero({ onEnrollClick }: HeroProps) {
         backgroundSize: '60px 60px',
       }} />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-14">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
-          <div className="space-y-8">
+          <div className="space-y-6">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-forest-500/20 text-sm">
               <div className="w-2 h-2 rounded-full bg-forest-400 animate-pulse" />
