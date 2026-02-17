@@ -49,9 +49,9 @@ export default function Footer() {
             </p>
             {/* Contact Info */}
             <div className="flex flex-col gap-2 mt-2">
-              <a href="mailto:info@evergreenprofitacademy.com" className="flex items-center gap-2.5 text-xs text-white/50 hover:text-forest-400 transition-colors duration-300">
+              <a href="mailto:profitevergreen@gmail.com" className="flex items-center gap-2.5 text-xs text-white/50 hover:text-forest-400 transition-colors duration-300">
                 <Mail className="w-4 h-4" />
-                <span>info@evergreenprofitacademy.com</span>
+                <span>profitevergreen@gmail.com</span>
               </a>
               <a href="tel:+919811659531" className="flex items-center gap-2.5 text-xs text-white/50 hover:text-forest-400 transition-colors duration-300">
                 <Phone className="w-4 h-4" />
