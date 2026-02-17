@@ -48,10 +48,10 @@ export default function Hero({ onEnrollClick }: HeroProps) {
         backgroundSize: '60px 60px',
       }} />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-6">
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-4">
+        <div className="grid lg:grid-cols-2 gap-6 items-center">
           {/* Left content */}
-          <div className="space-y-5">
+          <div className="space-y-4">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-forest-500/20 text-sm">
               <div className="w-2 h-2 rounded-full bg-forest-400 animate-pulse" />
@@ -59,7 +59,7 @@ export default function Hero({ onEnrollClick }: HeroProps) {
             </div>
 
             {/* Headline */}
-            <div className="space-y-3">
+            <div className="space-y-2">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight">
                 Build Consistent Skills.{' '}
                 <span className="gradient-text block mt-2">
@@ -107,7 +107,7 @@ export default function Hero({ onEnrollClick }: HeroProps) {
             </div>
 
             {/* Trust badges */}
-            <div className="flex flex-wrap gap-6 pt-2">
+            <div className="flex flex-wrap gap-6 pt-1">
               {[
                 { icon: CheckCircle2, text: 'Structured Curriculum' },
                 { icon: BarChart3, text: 'Practical Learning' },

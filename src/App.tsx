@@ -22,14 +22,15 @@ export default function App() {
     <div className="min-h-screen bg-navy-950">
       <Navbar onEnrollClick={() => setEnrollModalOpen(true)} />
       {/* <Hero onEnrollClick={() => setEnrollModalOpen(true)} /> */}
+      <div className="pt-20"></div>
       <Programs />
-      <WhyChooseUs />
+      {/* <WhyChooseUs /> */}
       <LearningExperience />
       <WhoIsThisFor />
       <Testimonials />
       <FAQ />
-      <CTA onEnrollClick={() => setEnrollModalOpen(true)} />
-      <Contact />
+      {/* <CTA onEnrollClick={() => setEnrollModalOpen(true)} /> */}
+      {/* <Contact /> */}
       <Footer />
       <WhatsAppButton />
       <EnrollModal isOpen={enrollModalOpen} onClose={() => setEnrollModalOpen(false)} />

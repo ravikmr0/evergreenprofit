@@ -1,6 +1,6 @@
 import {
   Bot,
-  Globe2,
+  Bitcoin,
   GraduationCap,
   ArrowRight,
   Cpu,
@@ -29,7 +29,7 @@ const programs = [
     thumbnail: '/algo.png',
   },
   {
-    icon: Globe2,
+    icon: Bitcoin,
     accent: LineChart,
     title: 'Forex & Crypto Academy',
     subtitle: 'Global Market Mastery',
@@ -86,49 +86,33 @@ export default function Programs() {
   };
 
   return (
-    <section id="programs" className="relative py-8 lg:py-10 overflow-hidden">
+    <section id="programs" className="relative py-6 lg:py-8 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-navy-950" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-forest-500/5 rounded-full blur-[150px]" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-6 section-animate">
-          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase text-forest-400 bg-forest-500/10 border border-forest-500/20 mb-3">
-            Programs Offered
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-3">
-        <div className="text-center max-w-2xl mx-auto mb-10 section-animate">
-          {/* <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase text-forest-400 bg-forest-500/10 border border-forest-500/20 mb-4">
-            Programs Offered
-          </span> */}
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4">
-            Choose Your{' '}
-            <span className="gradient-text">Trading Path</span>
-          </h2>
-          <p className="text-lg text-white/50 leading-relaxed">
-            Structured programs designed for every level — from curious beginners to aspiring professional traders.
-          </p>
-        </div>
+
 
         {/* Telegram Buttons - Single Line */}
-        <div className="flex flex-wrap justify-center items-center gap-4 mb-8 section-animate">
+        <div className="flex flex-wrap justify-center items-center gap-3 mb-6 section-animate">
           <a
             href="https://t.me/Algo_Profit_Trading"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl font-semibold text-white bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-blue-500/25"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-blue-500/25"
           >
-            <Send className="w-5 h-5" />
+            <Send className="w-4 h-4" />
             Join Free Telegram for Stock Market 
           </a>
           <a
             href="https://t.me/evergreen_forex_crypto_trading"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl font-semibold text-white bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-blue-500/25"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-blue-500/25"
           >
-            <Send className="w-5 h-5" />
+            <Send className="w-4 h-4" />
             Join Free Telegram for Crypto
           </a>
         </div>
@@ -223,6 +207,28 @@ export default function Programs() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Account Opening Links */}
+        <div className="flex flex-wrap justify-center items-center gap-4 mt-12 section-animate">
+          <a
+            href="https://invite.coindcx.com/90565908"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-purple-500/25"
+          >
+            <Send className="w-4 h-4" />
+            Free Crypto Trading Account Opening
+          </a>
+          <a
+            href={`https://wa.me/?text=${encodeURIComponent('I want to open a Stock Market Account')}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-green-500/25"
+          >
+            <Send className="w-4 h-4" />
+            Stock Market Account Opening
+          </a>
         </div>
       </div>
 
