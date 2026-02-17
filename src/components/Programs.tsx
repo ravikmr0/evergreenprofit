@@ -26,7 +26,7 @@ const programs = [
     iconColor: 'text-forest-400',
     cta: 'Join Telegram',
     link: 'https://t.me/Algo_Profit_Trading',
-    thumbnail: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
+    thumbnail: 'https://ideogram.ai/assets/image/balanced/response/5__E-t3zTV64UhA7LEOjkg@2k',
   },
   {
     icon: Globe2,
