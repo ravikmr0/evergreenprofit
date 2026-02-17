@@ -115,7 +115,7 @@ export default function Programs() {
             className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl font-semibold text-white bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-blue-500/25"
           >
             <Send className="w-5 h-5" />
-            Join Free Telegram
+            Join Free Telegram for Stock Market 
           </a>
         </div>
 
