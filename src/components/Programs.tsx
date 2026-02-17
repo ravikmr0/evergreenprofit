@@ -118,6 +118,18 @@ export default function Programs() {
             Join Free Telegram for Stock Market 
           </a>
         </div>
+         {/* Telegram Button */}
+        <div className="text-center mb-8 section-animate">
+          <a
+            href="https://t.me/evergreen_forex_crypto_trading"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 px-8 py-4 rounded-2xl font-semibold text-white bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-blue-500/25"
+          >
+            <Send className="w-5 h-5" />
+            Join Free Telegram for Crypto
+          </a>
+        </div>
 
         {/* Cards */}
         <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
