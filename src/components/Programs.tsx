@@ -26,7 +26,7 @@ const programs = [
     iconColor: 'text-forest-400',
     cta: 'Join Telegram',
     link: 'https://t.me/Algo_Profit_Trading',
-    thumbnail: 'https://chatgpt.com/s/m_69941ac9931c8191a4ceb9434b541480',
+    thumbnail: '/algo.png',
   },
   {
     icon: Globe2,
