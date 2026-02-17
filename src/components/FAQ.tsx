@@ -18,22 +18,22 @@ const faqs = [
     question: 'What trading instruments do you cover?',
     answer: 'We cover multiple trading instruments including stocks, options, futures, forex, and cryptocurrency. Our curriculum is designed to help you understand market dynamics across different asset classes.',
   },
-  {
-    question: 'How long does it take to complete a program?',
-    answer: 'Program duration varies depending on the course you choose and your learning pace. Most of our foundational programs can be completed in 4-8 weeks with consistent learning and practice.',
-  },
-  {
-    question: 'Is there mentorship support?',
-    answer: 'Yes! All our programs include access to our dedicated support ecosystem with mentors, community channels, and ongoing learning resources to help you succeed in your trading journey.',
-  },
-  {
-    question: 'What if I don\'t see results immediately?',
-    answer: 'Trading is a skill that requires practice and patience. We focus on building genuine skills and understanding rather than promising quick profits. Our approach is grounded in risk management and sustainable strategies.',
-  },
-  {
-    question: 'Can I access the course materials multiple times?',
-    answer: 'Yes! Once enrolled, you have unlimited access to course materials, resources, and updates. You can learn at your own pace and revisit content whenever you need a refresher.',
-  },
+  // {
+  //   question: 'How long does it take to complete a program?',
+  //   answer: 'Program duration varies depending on the course you choose and your learning pace. Most of our foundational programs can be completed in 4-8 weeks with consistent learning and practice.',
+  // },
+  // {
+  //   question: 'Is there mentorship support?',
+  //   answer: 'Yes! All our programs include access to our dedicated support ecosystem with mentors, community channels, and ongoing learning resources to help you succeed in your trading journey.',
+  // },
+  // {
+  //   question: 'What if I don\'t see results immediately?',
+  //   answer: 'Trading is a skill that requires practice and patience. We focus on building genuine skills and understanding rather than promising quick profits. Our approach is grounded in risk management and sustainable strategies.',
+  // },
+  // {
+  //   question: 'Can I access the course materials multiple times?',
+  //   answer: 'Yes! Once enrolled, you have unlimited access to course materials, resources, and updates. You can learn at your own pace and revisit content whenever you need a refresher.',
+  // },
 ];
 
 export default function FAQ() {
