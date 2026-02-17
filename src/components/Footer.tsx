@@ -40,7 +40,7 @@ export default function Footer() {
                   Evergreen Profit
                 </span>
                 <span className="text-[9px] font-medium tracking-[0.2em] uppercase text-forest-400/70">
-                  Stock Market Academy
+                  Stock Market Learning Academy
                 </span>
               </div>
             </a>
