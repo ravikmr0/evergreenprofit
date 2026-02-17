@@ -31,7 +31,7 @@ export default function Footer() {
           <div className="md:col-span-2 flex flex-col items-center md:items-start gap-4">
             <a href="#" className="flex items-center gap-3 group">
               <img 
-                src="/evergreen.png" 
+                src="/evergreenn.png" 
                 alt="Evergreen Profit Academy Logo" 
                 className="w-12 h-12 object-contain group-hover:scale-110 transition-transform duration-300"
               />
