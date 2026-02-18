@@ -3,8 +3,8 @@ import Navbar from './components/Navbar';
 // import Hero from './components/Hero';
 import Programs from './components/Programs';
 import WhyChooseUs from './components/WhyChooseUs';
-import LearningExperience from './components/LearningExperience';
-import WhoIsThisFor from './components/WhoIsThisFor';
+
+
 import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
 import CTA from './components/CTA';
@@ -25,8 +25,6 @@ export default function App() {
       <div className="pt-20"></div>
       <Programs />
       {/* <WhyChooseUs /> */}
-      <LearningExperience />
-      <WhoIsThisFor />
       <Testimonials />
       <FAQ />
       {/* <CTA onEnrollClick={() => setEnrollModalOpen(true)} /> */}
