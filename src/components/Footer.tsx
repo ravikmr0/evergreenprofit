@@ -3,6 +3,7 @@ import { useState } from 'react';
 import TermsAndConditions from './TermsAndConditions';
 import PrivacyPolicy from './PrivacyPolicy';
 import RefundPolicy from './RefundPolicy';
+import RiskDisclaimer from './RiskDisclaimer';
 
 const socialLinks = [
   { 
@@ -31,7 +32,7 @@ const socialLinks = [
   },
   { 
     name: 'Facebook', 
-    href: 'https://www.facebook.com/profile.php?id=100090142026473&mibextid=ZbWKwL',
+    href: 'https://www.facebook.com/profile.php?id=100089932135804',
     color: '#1877F2',
     svg: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>,
   },
@@ -47,10 +48,11 @@ const legalLinks = [
   { label: 'Terms & Conditions', action: 'terms' },
   { label: 'Privacy Policy', action: 'privacy' },
   { label: 'Refund Policy', action: 'refund' },
+  { label: 'Risk Disclaimer', action: 'risk' },
 ];
 
 export default function Footer() {
-  const [openModal, setOpenModal] = useState<'terms' | 'privacy' | 'refund' | null>(null);
+  const [openModal, setOpenModal] = useState<'terms' | 'privacy' | 'refund' | 'risk' | null>(null);
 
   return (
     <footer className="relative bg-[#020810]">
@@ -65,6 +67,10 @@ export default function Footer() {
       />
       <RefundPolicy
         isOpen={openModal === 'refund'}
+        onClose={() => setOpenModal(null)}
+      />
+      <RiskDisclaimer
+        isOpen={openModal === 'risk'}
         onClose={() => setOpenModal(null)}
       />
       {/* Subtle top accent line */}
@@ -87,7 +93,7 @@ export default function Footer() {
                   <span className="text-base font-bold tracking-tight leading-none text-white">
                     Evergreen Profit
                   </span>
-                  <span className="text-[7px] font-semibold tracking-wide uppercase text-purple-400">
+                  <span className="text-[7px] font-semibold tracking-wide uppercase text-white mt-1">
                     Since 2002
                   </span>
                 </div>
@@ -158,7 +164,7 @@ export default function Footer() {
               {legalLinks.map((link) => (
                 <li key={link.label}>
                   <button
-                    onClick={() => setOpenModal(link.action as 'terms' | 'privacy' | 'refund')}
+                    onClick={() => setOpenModal(link.action as 'terms' | 'privacy' | 'refund' | 'risk')}
                     className="text-[13px] text-white/35 hover:text-forest-400 transition-colors duration-300 text-left"
                   >
                     {link.label}
