@@ -1,4 +1,8 @@
 import { Mail, Phone, MapPin, ArrowUpRight } from 'lucide-react';
+import { useState } from 'react';
+import TermsAndConditions from './TermsAndConditions';
+import PrivacyPolicy from './PrivacyPolicy';
+import RefundPolicy from './RefundPolicy';
 
 const socialLinks = [
   { 
@@ -40,14 +44,29 @@ const quickLinks = [
 ];
 
 const legalLinks = [
-  { label: 'Terms & Conditions', href: '#terms' },
-  { label: 'Privacy Policy', href: '#privacy' },
-  { label: 'Refund Policy', href: '#refund' },
+  { label: 'Terms & Conditions', action: 'terms' },
+  { label: 'Privacy Policy', action: 'privacy' },
+  { label: 'Refund Policy', action: 'refund' },
 ];
 
 export default function Footer() {
+  const [openModal, setOpenModal] = useState<'terms' | 'privacy' | 'refund' | null>(null);
+
   return (
     <footer className="relative bg-[#020810]">
+      {/* Modals */}
+      <TermsAndConditions
+        isOpen={openModal === 'terms'}
+        onClose={() => setOpenModal(null)}
+      />
+      <PrivacyPolicy
+        isOpen={openModal === 'privacy'}
+        onClose={() => setOpenModal(null)}
+      />
+      <RefundPolicy
+        isOpen={openModal === 'refund'}
+        onClose={() => setOpenModal(null)}
+      />
       {/* Subtle top accent line */}
       <div className="h-px bg-gradient-to-r from-transparent via-forest-500/40 to-transparent" />
 
@@ -68,7 +87,7 @@ export default function Footer() {
                   <span className="text-base font-bold tracking-tight leading-none text-white">
                     Evergreen Profit
                   </span>
-                  <span className="text-[7px] font-semibold tracking-wide uppercase text-forest-400/60">
+                  <span className="text-[7px] font-semibold tracking-wide uppercase text-purple-400">
                     Since 2002
                   </span>
                 </div>
@@ -89,7 +108,7 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`w-9 h-9 rounded-lg border border-white/[0.08] flex items-center justify-center transition-all duration-300 ${
+                  className={`w-12 h-12 rounded-lg border border-white/[0.08] flex items-center justify-center transition-all duration-300 ${
                     social.name === 'Instagram' 
                       ? 'bg-gradient-to-r from-[#833AB4] to-[#FD1D1D] text-white hover:from-[#7a2fad] hover:to-[#f01010]'
                       : `text-white border-2 ${social.name === 'YouTube' && 'hover:border-[#FF0000] hover:text-[#FF0000]'} ${social.name === 'LinkedIn' && 'hover:border-[#0077B5] hover:text-[#0077B5]'} ${social.name === 'Telegram' && 'hover:border-[#0088cc] hover:text-[#0088cc]'} ${social.name === 'Facebook' && 'hover:border-[#1877F2] hover:text-[#1877F2]'}`
@@ -97,7 +116,7 @@ export default function Footer() {
                   aria-label={`Follow us on ${social.name}`}
                   title={social.name}
                 >
-                  <span className="w-4 h-4 flex items-center justify-center">{social.svg}</span>
+                  <span className="w-5 h-5 flex items-center justify-center">{social.svg}</span>
                 </a>
               ))}
             </div>
@@ -111,19 +130,19 @@ export default function Footer() {
             <ul className="flex flex-col gap-3">
               <li>
                 <a href="mailto:profitevergreen@gmail.com" className="flex items-start gap-2.5 text-[13px] text-white/35 hover:text-forest-400 transition-colors duration-300">
-                  <Mail className="w-4 h-4 mt-0.5 shrink-0 text-forest-500/50" />
+                  <Mail className="w-5 h-5 mt-0.5 shrink-0 text-forest-500/50" />
                   <span>profitevergreen@gmail.com</span>
                 </a>
               </li>
               <li>
                 <a href="tel:+919811659531" className="flex items-start gap-2.5 text-[13px] text-white/35 hover:text-forest-400 transition-colors duration-300">
-                  <Phone className="w-4 h-4 mt-0.5 shrink-0 text-forest-500/50" />
+                  <Phone className="w-5 h-5 mt-0.5 shrink-0 text-forest-500/50" />
                   <span>+91 9811659531</span>
                 </a>
               </li>
               <li>
                 <div className="flex items-start gap-2.5 text-[13px] text-white/35">
-                  <MapPin className="w-4 h-4 mt-0.5 shrink-0 text-forest-500/50" />
+                  <MapPin className="w-5 h-5 mt-0.5 shrink-0 text-forest-500/50" />
                   <span> Greater Noida West, Sector 16, UP,India</span>
                 </div>
               </li>
@@ -138,12 +157,12 @@ export default function Footer() {
             <ul className="flex flex-col gap-2.5">
               {legalLinks.map((link) => (
                 <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-[13px] text-white/35 hover:text-forest-400 transition-colors duration-300"
+                  <button
+                    onClick={() => setOpenModal(link.action as 'terms' | 'privacy' | 'refund')}
+                    className="text-[13px] text-white/35 hover:text-forest-400 transition-colors duration-300 text-left"
                   >
                     {link.label}
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>

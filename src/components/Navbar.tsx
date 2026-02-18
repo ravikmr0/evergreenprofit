@@ -49,9 +49,7 @@ export default function Navbar({ onEnrollClick }: NavbarProps) {
                 <span className="text-base sm:text-lg font-bold tracking-tight leading-none text-white">
                   Evergreen Profit
                 </span>
-                <span className="text-[8px] sm:text-[9px] font-semibold tracking-wide uppercase text-forest-400/60">
-                  Since 2002
-                </span>
+                
               </div>
               <span className="text-[9px] sm:text-[10px] font-medium tracking-[0.2em] uppercase text-forest-400/80">
                 Stock Market Academy
