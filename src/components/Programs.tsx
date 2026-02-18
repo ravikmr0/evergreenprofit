@@ -48,7 +48,7 @@ const programs = [
     icon: GraduationCap,
     accent: BookOpen,
     title: 'Evergreen Profit Course',
-    subtitle: 'Paid Course - Professional Program',
+    subtitle: 'Daily Live Classes',
     description:
       'A step-by-step professional roadmap from basics to advanced strategies. The complete system for building a sustainable trading career.',
     features: ['Basics to Advanced', 'Professional Roadmap', 'Strategy Building', 'Mentorship'],
@@ -104,7 +104,7 @@ export default function Programs() {
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-blue-500/25"
           >
             <Send className="w-4 h-4" />
-            Join Free Telegram for Stock Market 
+            Free Telegram for Stock Market 
           </a>
           <a
             href="https://t.me/evergreen_forex_crypto_trading"
@@ -113,7 +113,7 @@ export default function Programs() {
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-blue-500/25"
           >
             <Send className="w-4 h-4" />
-            Join Free Telegram for Crypto
+            Free Telegram for Crypto Market
           </a>
         </div>
 
@@ -177,14 +177,23 @@ export default function Programs() {
                     >
                       Paid Course
                     </a>
-                  ) : (program.title === 'ALGO Trading Strategies' || program.title === 'Forex & Crypto Academy') ? (
+                  ) : program.title === 'ALGO Trading Strategies' ? (
                     <a
                       href="https://superprofile.bio/evergreenprofit1/NnFYQIHyIx"
                       target="_blank"
                       rel="noopener noreferrer"
                       className={`flex-1 px-4 py-2.5 rounded-xl text-sm font-semibold text-white ${program.iconBg} border ${program.borderColor} hover:bg-white/10 transition-all duration-300 text-center`}
                     >
-                      Paid Course
+                      Paid Algo 
+                    </a>
+                  ) : program.title === 'Forex & Crypto Academy' ? (
+                    <a
+                      href="https://superprofile.bio/evergreenprofit1/NnFYQIHyIx"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`flex-1 px-4 py-2.5 rounded-xl text-sm font-semibold text-white ${program.iconBg} border ${program.borderColor} hover:bg-white/10 transition-all duration-300 text-center`}
+                    >
+                      Paid Crypto
                     </a>
                   ) : (
                     <button
@@ -221,13 +230,13 @@ export default function Programs() {
             Free Crypto Trading Account Opening
           </a>
           <a
-            href={`https://wa.me/?text=${encodeURIComponent('I want to open a Stock Market Account')}`}
+            href={`https://wa.me/919811659531?text=${encodeURIComponent('Hello! I I want to open a Free Demat Account')}`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-green-500/25"
           >
             <Send className="w-4 h-4" />
-            Stock Market Account Opening
+            Free Demat Account Opening
           </a>
         </div>
       </div>

@@ -16,7 +16,7 @@ const faqs = [
   },
   {
     question: 'What trading instruments do you cover?',
-    answer: 'We cover multiple trading instruments including stocks, options, futures, forex, and cryptocurrency. Our curriculum is designed to help you understand market dynamics across different asset classes.',
+    answer: 'Crypto Was the Beginning. US Stock Futures Are the Next Move.',
   },
   // {
   //   question: 'How long does it take to complete a program?',
@@ -49,13 +49,13 @@ export default function FAQ() {
         {/* Header */}
         <div className="text-center mb-12 section-animate">
           <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase text-gold-400 bg-gold-500/10 border border-gold-500/20 mb-4">
-            Frequently Asked Questions
+            FQA
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4">
             Common Questions About <span className="gradient-text-gold">Evergreen Profit</span>
           </h2>
           <p className="text-lg text-white/50 leading-relaxed max-w-2xl mx-auto">
-            Everything you need to know about our academy, programs, and how we can help you succeed in trading.
+            Learn all about our academy, our training programs, and how we help you become a successful trader.
           </p>
         </div>
 
@@ -96,7 +96,7 @@ export default function FAQ() {
         <div className="mt-12 text-center section-animate">
           <p className="text-white/50 mb-4">Still have questions?</p>
           <a
-            href={`https://wa.me/?text=${encodeURIComponent('I have questions about your trading programs')}`}
+            href={`https://wa.me/919811659531?text=${encodeURIComponent('Hello! I would like to know more about your learning programs.')}`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-8 py-3 rounded-xl bg-gradient-to-r from-gold-500 to-gold-600 text-navy-950 font-semibold hover:shadow-lg hover:shadow-gold-500/20 transition-all duration-300 hover:scale-105"
