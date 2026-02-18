@@ -45,9 +45,14 @@ export default function Navbar({ onEnrollClick }: NavbarProps) {
               className="w-10 h-10 sm:w-12 sm:h-12 object-contain group-hover:scale-105 transition-transform duration-300"
             />
             <div className="flex flex-col">
-              <span className="text-base sm:text-lg font-bold tracking-tight leading-none text-white">
-                Evergreen Profit
-              </span>
+              <div className="flex items-center gap-2">
+                <span className="text-base sm:text-lg font-bold tracking-tight leading-none text-white">
+                  Evergreen Profit
+                </span>
+                <span className="text-[8px] sm:text-[9px] font-semibold tracking-wide uppercase text-forest-400/60">
+                  Since 2002
+                </span>
+              </div>
               <span className="text-[9px] sm:text-[10px] font-medium tracking-[0.2em] uppercase text-forest-400/80">
                 Stock Market Academy
               </span>

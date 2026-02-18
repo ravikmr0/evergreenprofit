@@ -7,10 +7,10 @@ interface EnrollModalProps {
 }
 
 const experienceLevels = [
-  'Complete Beginner',
-  'Some Knowledge',
-  'Intermediate Trader',
-  'Advanced / Professional',
+  'ALGO Trading Strategies',
+  'Forex & Crypto Academy',
+  'Evergreen Profit Course',
+  'Free Demat Account Opening',
 ];
 
 export default function EnrollModal({ isOpen, onClose }: EnrollModalProps) {
@@ -133,7 +133,7 @@ export default function EnrollModal({ isOpen, onClose }: EnrollModalProps) {
               {/* Experience Level */}
               <div>
                 <label className="block text-sm font-medium text-gray-300 mb-2">
-                  Trading Experience *
+                  Select Your Interest
                 </label>
                 <select
                   name="experience"
@@ -142,7 +142,7 @@ export default function EnrollModal({ isOpen, onClose }: EnrollModalProps) {
                   required
                   className="w-full px-4 py-2 bg-navy-900 border border-gold-500/20 rounded-lg text-white focus:outline-none focus:border-gold-500/50"
                 >
-                  <option value="">Select your experience level</option>
+                  <option value="">Select Your Interest</option>
                   {experienceLevels.map(level => (
                     <option key={level} value={level}>
                       {level}
