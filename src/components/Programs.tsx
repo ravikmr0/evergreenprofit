@@ -8,6 +8,7 @@ import {
   BookOpen,
   Send,
   X,
+  Wallet,
 } from 'lucide-react';
 import { useState } from 'react';
 
@@ -226,7 +227,7 @@ export default function Programs() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-purple-500/25"
           >
-            <Send className="w-4 h-4" />
+            <Wallet className="w-4 h-4" />
             Free Crypto Trading Account Opening
           </a>
           <a
@@ -235,7 +236,7 @@ export default function Programs() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-green-500/25"
           >
-            <Send className="w-4 h-4" />
+            <Wallet className="w-4 h-4" />
             Free Demat Account Opening
           </a>
         </div>

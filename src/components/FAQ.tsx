@@ -16,7 +16,7 @@ const faqs = [
   },
   {
     question: 'What trading instruments do you cover?',
-    answer: 'Crypto Was the Beginning. US Stock Futures Are the Next Move.',
+    answer: 'We cover multiple trading instruments including stocks, options, futures, forex, and crypto currency , US stock future. Our curriculum is designed to help you understand market dynamics across different asset classes',
   },
   // {
   //   question: 'How long does it take to complete a program?',
@@ -49,7 +49,7 @@ export default function FAQ() {
         {/* Header */}
         <div className="text-center mb-12 section-animate">
           <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase text-gold-400 bg-gold-500/10 border border-gold-500/20 mb-4">
-            FQA
+            Frequently Asked Questions(FQA)
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4">
             Common Questions About <span className="gradient-text-gold">Evergreen Profit</span>
