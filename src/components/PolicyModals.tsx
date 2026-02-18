@@ -1,15 +1,188 @@
 import { X } from 'lucide-react';
-import { useState } from 'react';
+import { type ReactNode, useState } from 'react';
 
 interface PolicyModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-export function TermsAndConditionsModal({ isOpen, onClose }: PolicyModalProps) {
+function ModalShell({
+  isOpen,
+  onClose,
+  title,
+  headerClassName,
+  children,
+}: PolicyModalProps & {
+  title: string;
+  headerClassName: string;
+  children: ReactNode;
+}) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-      <div className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
-        {/* Header */}\n        <div className=\"sticky top-0 bg-gradient-to-r from-blue-600 to-blue-800 text-white py-6 px-6 flex justify-between items-center\">\n          <h2 className=\"text-2xl font-bold\">Terms & Conditions</h2>\n          <button\n            onClick={onClose}\n            className=\"text-white hover:bg-blue-700 p-2 rounded-full transition-colors\"\n          >\n            <X size={24} />\n          </button>\n        </div>\n\n        {/* Content */}\n        <div className=\"px-6 py-8 space-y-6\">\n          <section>\n            <h3 className=\"text-lg font-bold text-gray-900 mb-3\">1. Agreement to Terms</h3>\n            <p className=\"text-gray-700 text-sm leading-relaxed\">\n              By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.\n            </p>\n          </section>\n\n          <section>\n            <h3 className=\"text-lg font-bold text-gray-900 mb-3\">2. Use License</h3>\n            <p className=\"text-gray-700 text-sm leading-relaxed mb-3\">\n              Permission is granted to temporarily download one copy of the materials (information or software) on our website for personal, non-commercial transitory viewing only. Under this license you may not:\n            </p>\n            <ul className=\"list-disc list-inside text-gray-700 text-sm space-y-1 ml-2\">\n              <li>Modify or copy the materials</li>\n              <li>Use materials for commercial purposes</li>\n              <li>Attempt to decompile or reverse engineer any software</li>\n              <li>Remove any copyright or other proprietary notations</li>\n              <li>Transfer materials to another person or mirror on any other server</li>\n            </ul>\n          </section>\n\n          <section>\n            <h3 className=\"text-lg font-bold text-gray-900 mb-3\">3. Disclaimer</h3>\n            <p className=\"text-gray-700 text-sm leading-relaxed\">\n              The materials on our website are provided on an 'as is' basis. We make no warranties, expressed or implied, and hereby disclaim all other warranties including implied warranties or conditions of merchantability, fitness for a particular purpose.\n            </p>\n          </section>\n\n          <section>\n            <h3 className=\"text-lg font-bold text-gray-900 mb-3\">4. Limitations</h3>\n            <p className=\"text-gray-700 text-sm leading-relaxed\">\n              In no event shall our company or its suppliers be liable for any damages arising out of the use or inability to use the materials on the website, even if we have been notified of the possibility of such damage.\n            </p>\n          </section>\n\n          <section>\n            <h3 className=\"text-lg font-bold text-gray-900 mb-3\">5. Accuracy of Materials</h3>\n            <p className=\"text-gray-700 text-sm leading-relaxed\">\n              The materials appearing on our website could include technical, typographical, or photographic errors. We may make changes to the materials contained on the website at any time without notice.\n            </p>\n          </section>\n\n          <section>\n            <h3 className=\"text-lg font-bold text-gray-900 mb-3\">6. Links</h3>\n            <p className=\"text-gray-700 text-sm leading-relaxed\">\n              We have not reviewed all sites linked to our website and are not responsible for the contents of any such linked site. Use of any such linked website is at the user's own risk.\n            </p>\n          </section>\n\n          <section>\n            <h3 className=\"text-lg font-bold text-gray-900 mb-3\">7. Governing Law</h3>\n            <p className=\"text-gray-700 text-sm leading-relaxed\">\n              These terms are governed by and construed in accordance with applicable law, and you irrevocably submit to the exclusive jurisdiction of the courts.\n            </p>\n          </section>\n        </div>\n      </div>\n    </div>\n  );\n}\n\nexport function PrivacyPolicyModal({ isOpen, onClose }: PolicyModalProps) {\n  if (!isOpen) return null;\n\n  return (\n    <div className=\"fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4\">\n      <div className=\"bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto\">\n        {/* Header */}\n        <div className=\"sticky top-0 bg-gradient-to-r from-purple-600 to-purple-800 text-white py-6 px-6 flex justify-between items-center\">\n          <h2 className=\"text-2xl font-bold\">Privacy Policy</h2>\n          <button\n            onClick={onClose}\n            className=\"text-white hover:bg-purple-700 p-2 rounded-full transition-colors\"\n          >\n            <X size={24} />\n          </button>\n        </div>\n\n        {/* Content */}\n        <div className=\"px-6 py-8 space-y-6\">\n          <section>\n            <h3 className=\"text-lg font-bold text-gray-900 mb-3\">1. Introduction</h3>\n            <p className=\"text-gray-700 text-sm leading-relaxed\">\n              We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.\n            </p>\n          </section>\n\n          <section>\n            <h3 className=\"text-lg font-bold text-gray-900 mb-3\">2. Information We Collect</h3>\n            <p className=\"text-gray-700 text-sm leading-relaxed mb-3\">\n              We may collect information about you in various ways:\n            </p>\n            <ul className=\"list-disc list-inside text-gray-700 text-sm space-y-1 ml-2\">\n              <li><strong>Personal Data:</strong> Name, email, phone number</li>\n              <li><strong>Financial Data:</strong> Information related to payment methods</li>\n              <li><strong>Data From Forms:</strong> Information from form submissions</li>\n              <li><strong>Technical Data:</strong> Browser type, IP address, access times</li>\n            </ul>\n          </section>\n\n          <section>\n            <h3 className=\"text-lg font-bold text-gray-900 mb-3\">3. Use of Your Information</h3>\n            <p className=\"text-gray-700 text-sm leading-relaxed mb-3\">\n              We use information collected to:\n            </p>\n            <ul className=\"list-disc list-inside text-gray-700 text-sm space-y-1 ml-2\">\n              <li>Process transactions and send related information</li>\n              <li>Email regarding your account or order</li>\n              <li>Manage purchases and payments</li>\n              <li>Create personalized experiences</li>\n              <li>Improve efficiency and operation of the site</li>\n              <li>Analyze usage and trends</li>\n            </ul>\n          </section>\n\n          <section>\n            <h3 className=\"text-lg font-bold text-gray-900 mb-3\">4. Security of Your Information</h3>\n            <p className=\"text-gray-700 text-sm leading-relaxed\">\n              We use administrative, technical, and physical security measures to protect your personal information. However, no method of transmission over the Internet is 100% secure.\n            </p>\n          </section>\n\n          <section>\n            <h3 className=\"text-lg font-bold text-gray-900 mb-3\">5. Cookies and Tracking Technologies</h3>\n            <p className=\"text-gray-700 text-sm leading-relaxed\">\n              We may use cookies, web beacons, and similar tracking technologies to track activity on our website. You can instruct your browser to refuse all cookies or indicate when a cookie is being sent.\n            </p>\n          </section>\n\n          <section>\n            <h3 className=\"text-lg font-bold text-gray-900 mb-3\">6. Third-Party Links</h3>\n            <p className=\"text-gray-700 text-sm leading-relaxed\">\n              The site may contain links to third-party websites. We are not responsible for the privacy practices or content of external links.\n            </p>\n          </section>\n        </div>\n      </div>\n    </div>\n  );\n}\n\nexport function RefundPolicyModal({ isOpen, onClose }: PolicyModalProps) {\n  if (!isOpen) return null;\n\n  return (\n    <div className=\"fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4\">\n      <div className=\"bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto\">\n        {/* Header */}\n        <div className=\"sticky top-0 bg-gradient-to-r from-green-600 to-green-800 text-white py-6 px-6 flex justify-between items-center\">\n          <h2 className=\"text-2xl font-bold\">Refund Policy</h2>\n          <button\n            onClick={onClose}\n            className=\"text-white hover:bg-green-700 p-2 rounded-full transition-colors\"\n          >\n            <X size={24} />\n          </button>\n        </div>\n\n        {/* Content */}\n        <div className=\"px-6 py-8 space-y-6\">\n          <section>\n            <h3 className=\"text-lg font-bold text-gray-900 mb-3\">1. Refund Eligibility</h3>\n            <p className=\"text-gray-700 text-sm leading-relaxed\">\n              We want you to be completely satisfied with your purchase. If you are not satisfied with your course or learning material, you may be eligible for a refund within 30 days.\n            </p>\n          </section>\n\n          <section>\n            <h3 className=\"text-lg font-bold text-gray-900 mb-3\">2. Refund Period</h3>\n            <p className=\"text-gray-700 text-sm leading-relaxed\">\n              Refund requests must be submitted within <strong>30 days</strong> of your purchase date. After 30 days, refund requests will not be accepted unless there are exceptional circumstances.\n            </p>\n          </section>\n\n          <section>\n            <h3 className=\"text-lg font-bold text-gray-900 mb-3\">3. Refund Conditions</h3>\n            <p className=\"text-gray-700 text-sm leading-relaxed mb-3\">\n              To be eligible for a refund:\n            </p>\n            <ul className=\"list-disc list-inside text-gray-700 text-sm space-y-1 ml-2\">\n              <li>Request must be within 30 days of purchase</li>\n              <li>You must have accessed less than 30% of content</li>\n              <li>Provide a valid reason for refund</li>\n              <li>Materials must not have been substantially used</li>\n            </ul>\n          </section>\n\n          <section>\n            <h3 className=\"text-lg font-bold text-gray-900 mb-3\">4. Non-Refundable Items</h3>\n            <p className=\"text-gray-700 text-sm leading-relaxed mb-3\">\n              The following are not eligible for refunds:\n            </p>\n            <ul className=\"list-disc list-inside text-gray-700 text-sm space-y-1 ml-2\">\n              <li>Courses completed more than 30%</li>\n              <li>Certificates or credentials already issued</li>\n              <li>Downloadable resources or materials</li>\n              <li>Promotional or discounted purchases</li>\n              <li>Purchases made more than 30 days ago</li>\n            </ul>\n          </section>\n\n          <section>\n            <h3 className=\"text-lg font-bold text-gray-900 mb-3\">5. How to Request a Refund</h3>\n            <p className=\"text-gray-700 text-sm leading-relaxed mb-3\">\n              To request a refund:\n            </p>\n            <ol className=\"list-decimal list-inside text-gray-700 text-sm space-y-1 ml-2\">\n              <li>Email refunds@example.com with your order number</li>\n              <li>Include your full name, email, and phone number</li>\n              <li>Provide reason for the refund request</li>\n              <li>Wait for response within 5-7 business days</li>\n            </ol>\n          </section>\n\n          <section>\n            <h3 className=\"text-lg font-bold text-gray-900 mb-3\">6. Refund Processing Time</h3>\n            <p className=\"text-gray-700 text-sm leading-relaxed\">\n              Once approved, refunds are processed to your original payment method within 7-10 business days. Bank processing may take an additional 3-5 business days.\n            </p>\n          </section>\n\n          <section>\n            <h3 className=\"text-lg font-bold text-gray-900 mb-3\">7. No Questions Asked Guarantee</h3>\n            <p className=\"text-gray-700 text-sm leading-relaxed\">\n              If unsatisfied within the first 7 days and have not accessed more than 10% of the course content, we offer a full refund with no questions asked.\n            </p>\n          </section>\n        </div>\n      </div>\n    </div>\n  );\n}\n\nexport function PolicyModalsContainer() {\n  const [openModal, setOpenModal] = useState<'terms' | 'privacy' | 'refund' | null>(null);\n\n  return (\n    <>\n      <TermsAndConditionsModal\n        isOpen={openModal === 'terms'}\n        onClose={() => setOpenModal(null)}\n      />\n      <PrivacyPolicyModal\n        isOpen={openModal === 'privacy'}\n        onClose={() => setOpenModal(null)}\n      />\n      <RefundPolicyModal\n        isOpen={openModal === 'refund'}\n        onClose={() => setOpenModal(null)}\n      />\n    </>\n  );\n}\n
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4">
+      <div className="max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-lg bg-white">
+        <div
+          className={`sticky top-0 flex items-center justify-between px-6 py-6 text-white ${headerClassName}`}
+        >
+          <h2 className="text-2xl font-bold">{title}</h2>
+          <button
+            onClick={onClose}
+            className="rounded-full p-2 text-white transition-colors hover:bg-black/20"
+            aria-label={`Close ${title}`}
+          >
+            <X size={24} />
+          </button>
+        </div>
+
+        <div className="space-y-6 px-6 py-8">{children}</div>
+      </div>
+    </div>
+  );
+}
+
+export function TermsAndConditionsModal({ isOpen, onClose }: PolicyModalProps) {
+  return (
+    <ModalShell
+      isOpen={isOpen}
+      onClose={onClose}
+      title="Terms & Conditions"
+      headerClassName="bg-gradient-to-r from-blue-600 to-blue-800"
+    >
+      <section>
+        <h3 className="mb-3 text-lg font-bold text-gray-900">1. Agreement to Terms</h3>
+        <p className="text-sm leading-relaxed text-gray-700">
+          By using this website, you agree to these terms. If you disagree with any part,
+          please do not use this service.
+        </p>
+      </section>
+
+      <section>
+        <h3 className="mb-3 text-lg font-bold text-gray-900">2. Use License</h3>
+        <p className="mb-3 text-sm leading-relaxed text-gray-700">
+          Permission is granted for personal, non-commercial use only. You may not:
+        </p>
+        <ul className="ml-2 list-inside list-disc space-y-1 text-sm text-gray-700">
+          <li>Modify or copy materials for commercial purposes</li>
+          <li>Attempt to reverse engineer software</li>
+          <li>Remove copyright or proprietary notices</li>
+          <li>Mirror content on other servers</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3 className="mb-3 text-lg font-bold text-gray-900">3. Disclaimer</h3>
+        <p className="text-sm leading-relaxed text-gray-700">
+          Materials are provided “as is” without warranties of any kind.
+        </p>
+      </section>
+
+      <section>
+        <h3 className="mb-3 text-lg font-bold text-gray-900">4. Governing Law</h3>
+        <p className="text-sm leading-relaxed text-gray-700">
+          These terms are governed by applicable law and subject to the jurisdiction of
+          competent courts.
+        </p>
+      </section>
+    </ModalShell>
+  );
+}
+
+export function PrivacyPolicyModal({ isOpen, onClose }: PolicyModalProps) {
+  return (
+    <ModalShell
+      isOpen={isOpen}
+      onClose={onClose}
+      title="Privacy Policy"
+      headerClassName="bg-gradient-to-r from-purple-600 to-purple-800"
+    >
+      <section>
+        <h3 className="mb-3 text-lg font-bold text-gray-900">1. Information We Collect</h3>
+        <p className="text-sm leading-relaxed text-gray-700">
+          We may collect personal information such as your name, email address, billing
+          details, and usage analytics when you interact with our platform.
+        </p>
+      </section>
+
+      <section>
+        <h3 className="mb-3 text-lg font-bold text-gray-900">2. How We Use Information</h3>
+        <p className="text-sm leading-relaxed text-gray-700">
+          Your information is used to provide services, process payments, improve course
+          delivery, and communicate important updates.
+        </p>
+      </section>
+
+      <section>
+        <h3 className="mb-3 text-lg font-bold text-gray-900">3. Data Security</h3>
+        <p className="text-sm leading-relaxed text-gray-700">
+          We implement reasonable administrative and technical safeguards to protect your
+          data, though no method of transmission is completely secure.
+        </p>
+      </section>
+
+      <section>
+        <h3 className="mb-3 text-lg font-bold text-gray-900">4. Third-Party Links</h3>
+        <p className="text-sm leading-relaxed text-gray-700">
+          Our site may include links to third-party websites. We are not responsible for
+          their privacy practices.
+        </p>
+      </section>
+    </ModalShell>
+  );
+}
+
+export function RefundPolicyModal({ isOpen, onClose }: PolicyModalProps) {
+  return (
+    <ModalShell
+      isOpen={isOpen}
+      onClose={onClose}
+      title="Refund Policy"
+      headerClassName="bg-gradient-to-r from-green-600 to-green-800"
+    >
+      <section>
+        <h3 className="mb-3 text-lg font-bold text-gray-900">1. Refund Window</h3>
+        <p className="text-sm leading-relaxed text-gray-700">
+          Refund requests are accepted within 30 days of purchase, subject to eligibility.
+        </p>
+      </section>
+
+      <section>
+        <h3 className="mb-3 text-lg font-bold text-gray-900">2. Eligibility Criteria</h3>
+        <ul className="ml-2 list-inside list-disc space-y-1 text-sm text-gray-700">
+          <li>Request submitted within 30 days of purchase</li>
+          <li>Course completion is below the eligible threshold</li>
+          <li>Valid purchase details are provided</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3 className="mb-3 text-lg font-bold text-gray-900">3. Processing Time</h3>
+        <p className="text-sm leading-relaxed text-gray-700">
+          Approved refunds are usually processed within 7–10 business days to the original
+          payment method.
+        </p>
+      </section>
+    </ModalShell>
+  );
+}
+
+export function PolicyModalsContainer() {
+  const [openModal, setOpenModal] = useState<'terms' | 'privacy' | 'refund' | null>(null);
+
+  return (
+    <>
+      <TermsAndConditionsModal
+        isOpen={openModal === 'terms'}
+        onClose={() => setOpenModal(null)}
+      />
+      <PrivacyPolicyModal
+        isOpen={openModal === 'privacy'}
+        onClose={() => setOpenModal(null)}
+      />
+      <RefundPolicyModal
+        isOpen={openModal === 'refund'}
+        onClose={() => setOpenModal(null)}
+      />
+    </>
+  );
+}
